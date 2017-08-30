@@ -1,0 +1,22 @@
+{
+  "name": "save-image",
+  "version": "0.0.1",
+  "description": "Dependency free promise oriented utility to save images locally",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzarcon/save-image.git"
+  },
+  "author": "zzarcon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zzarcon/save-image/issues"
+  },
+  "homepage": "https://github.com/zzarcon/save-image#readme",
+  "devDependencies": {
+    "jest": "^20.0.4"
+  }
+}
