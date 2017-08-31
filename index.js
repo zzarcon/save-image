@@ -5,7 +5,7 @@ const https = require('https');
 const {join, basename} = require('path');
 const {writeFile} = require('fs');
 
-const save = async (imageUrl, destinationPath) => {
+const save = async (imageUrl /*: string */, destinationPath /*: string */) => {
   const url = new URL(imageUrl);
   const get = url.protocol === 'https:' ? https.get : http.get;
 

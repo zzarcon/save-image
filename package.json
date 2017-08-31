@@ -4,7 +4,8 @@
   "description": "Dependency free promise oriented utility to save images locally",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "release": "flow && npm version patch && git push --tags && git push && npm publish"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/zzarcon/save-image#readme",
   "devDependencies": {
+    "flow-bin": "^0.53.1",
     "jest": "^20.0.4",
     "node-delete": "^0.1.2"
   }
