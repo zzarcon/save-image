@@ -1,4 +1,4 @@
-# save-image 🌈💾
+# save-image [![Build Status](https://travis-ci.org/zzarcon/save-image.svg)](https://travis-ci.org/zzarcon/save-image) 🌈💾
 > Save remote images locally with ease
 
 **Save image** is a dependency free + promise oriented + image saver utility that makes saving remote images locally trivial.
