@@ -1,6 +1,7 @@
 // TODO: Failure cases
 
 const saveImage = require('.');
+const {resolve} = require('path');
 const {statSync} = require('fs');
 const del = require('node-delete');
 const imageUrl = 'http://zzarcon.github.io/static/images/avatar.jpeg';
@@ -23,6 +24,15 @@ test('default', async () => {
 
 test('custom name', async () => {
   const fileName = 'hector.ico';
+  const image = await saveImage(imageUrl, fileName);
+
+  expect(image.path).toEqual(resolve(image.path));
+  expect(image.content).toBeDefined();
+  expect(existFile(fileName)).toBeTruthy();
+});
+
+test.skip('custom directory', async () => {
+  const fileName = './fixtures';
   await saveImage(imageUrl, fileName);
 
   expect(existFile(fileName)).toBeTruthy();

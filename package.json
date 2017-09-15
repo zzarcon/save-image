@@ -1,7 +1,7 @@
 {
   "name": "save-image",
   "version": "0.0.2",
-  "description": "Dependency free promise oriented utility to save images locally",
+  "description": "Save remote images locally with ease",
   "main": "index.js",
   "scripts": {
     "test": "jest",
