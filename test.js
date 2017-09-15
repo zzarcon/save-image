@@ -5,6 +5,7 @@ const {resolve} = require('path');
 const {statSync} = require('fs');
 const del = require('node-delete');
 const imageUrl = 'http://zzarcon.github.io/static/images/avatar.jpeg';
+const httpsImageUrl = 'https://zzarcon.github.io/static/images/avatar.jpeg';
 
 const cleanUp = () => {
   del.sync('./hector.ico');
@@ -43,4 +44,10 @@ test('custom name and directory', async () => {
   await saveImage(imageUrl, path);
 
   expect(existFile(path)).toBeTruthy();
+});
+
+test.only('https image', async () => {
+  await saveImage(httpsImageUrl);
+
+  expect(existFile('avatar.jpeg')).toBeTruthy();
 });
